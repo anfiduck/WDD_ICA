@@ -1,64 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Future is Now</title>
-<link rel="stylesheet" href="style.css">
-<script src=""></script>
-<link href="" rel="stylesheet">
-<script src="app.js" defer></script>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future is Now</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arial&display=swap" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.css" rel="stylesheet" />
+<script>
+  mapboxgl.accessToken = 'YOUR_ACpk.eyJ1IjoiYW5maWR1Y2siLCJhIjoiY2xpZWUyZmN0MDhneDNkcDY5MWc3ejFsbyJ9.8SdnELn6K8YnZB_lqDEFmACESS_TOKEN';
+</script>
+    <script src="app.js" defer></script>
+</head>
 <body>
-<section id="intro">
-    <div class="AI_background"></div>
-    <div class="AI_content">
-        <h1>The Future is Now</h1>
-        <h2>School of Media and IT Mini Conference in AI</h2>
-        <h3>26.5.2023 9:00am – 18:00pm</h3>
-        <p>Explore the diverse applications of AI, the challenges and opportunities that come with its development, and how it can be leveraged to make a positive impact on society. We look forward to engaging in meaningful conversations that will further the progress of AI and its potential to shape the future.</p>
-    </div>
-</section>
-</body>
+    <section id="intro">
+        <div class="AI_background"></div>
+        <div class="AI_content">
+            <h1>The Future is Now</h1>
+            <h2>School of Media and IT Mini Conference in AI</h2>
+            <h3>26.5.2023 9:00am – 18:00pm</h3>
+            <p>Explore the diverse applications of AI, the challenges and opportunities that come with its development, and how it can be leveraged to make a positive impact on society. We look forward to engaging in meaningful conversations that will further the progress of AI and its potential to shape the future.</p>
+        </div>
+    </section>
 
-<section id="whatson">
-    <div class="whatson">What's on?</div>
-</section>
+    <section class="meetourspeakers">
+      <h2>Meet Our Speakers</h2>
+    </section>
 
-<section id="schedule">
-    <div class="schedule">
-        <div id="item1"></div>
-        <div id="item2"></div>
-        <div id="item3" img src="media/speaker_1.jpg"></div>
-        <div id="item4" img src="media/speaker_2.jpg"></div>
-        <div id="item5"></div>
-        <div id="item6"></div>
-        <div id="item7" img src="media/speaker_3.jpg"></div>
-        <div id="item8" img src="media/speaker_4.jpg"></div>
-        <div id="item9"></div>
-        <div id="item10" img src="media/speaker_5.jpg"></div>
-        <div id="item11"></div>
+    <section id="speakers">
+        <div class="speaker">
+            <img src="media/speaker_1.jpg" alt="Speaker 1">
+            <h4>Mark Anderson</h4>
+        </div>
+        <div class="speaker">
+            <img src="media/speaker_2.jpg" alt="Speaker 2">
+            <h4>Sarah Johnson</h4>
+        </div>
+        <div class="speaker">
+            <img src="media/speaker_3.jpg" alt="Speaker 3">
+            <h4>Jennifer Williams</h4>
+        </div>
+        <div class="speaker">
+            <img src="media/speaker_4.jpg" alt="Speaker 4">
+            <h4>Andrew Smith</h4>
+        </div>
+        <div class="speaker">
+            <img src="media/speaker_5.jpg" alt="Speaker 5">
+            <h4>Rebecca Jones</h4>
+        </div>
+    </section>
+
+    <section id="timetable">
+      <h2>Timetable</h2>
+      <div class="timetable_container">
+        <div class="timetable_item">
+          <h3>8:00am - 9:00am</h3>
+          <h4>Doors open and registration</h4>
+        </div>
+        <div class="timetable_item">
+          <h3>9:00am - 9:30am</h3>
+          <h4>Opening remarks</h4>
+        </div>
+        <div class="timetable_item">
+          <h3>9:30am - 10:30am</h3>
+          <h4>Mark Anderson: Introduction to AI</h4>
+        </div>
+        <div class="timetable_item">
+          <h3>10:30am - 11:30pm</h3>
+          <h4>Sarah Johnson: AI Applications in Healthcare</h4>
+        </div>
+        <div class="timetable_item">
+          <h3>11:30pm - 12:30pm</h3>
+          <h4>Workshop 1: Developing AI Algorithms</h4>
+        </div>
+        <div class="timetable_item">
+          <h3>12:30pm - 2:30pm</h3>
+          <h4>Lunch</h4>
+        </div>
+        <div class="timetable_item">
+          <h3>1:30pm - 2:30pm</h3>
+          <h4>Jennifer Williams: Machine Learning</h4>
+        </div>
+        <div class="timetable_item">
+          <h3>2:30pm - 3:30pm</h3>
+          <h4>Andrew Smith: Natural Language Processing</h4>
+        </div>
+        <div class="timetable_item">
+          <h3>3:30pm - 4:30pm</h3>
+          <h4>Workshop 2: AI Ethics and Society</h4>
+        </div>
+        <div class="timetable_item">
+          <h3>4:30pm-5:30pm</h3>
+          <h4>Rebecca Jones: AI and the Future</h4>
+        </div>
+        <div class="timetable_item">
+          <h3>5:30pm-6:00pm</h3>
+          <h4>Closing remarks and networking</h4>
+        </div>
       </div>
-</section>
+    </section>
+    
 
-<section id="contact">
+    <section id="location">
+      <h2>Find us:</h2>
+      <div id="map"></div>
+    </section>
 
-    <form id="form">
-        <div>
-            <label for="name">Name</label>
-            <textarea name="name" id="name" placeholder="Name Surname" required></textarea>
+    <section id="contact">
+      <h2>Register now:</h2>
+        <form id="form">
+            <div>
+                <label for="name">Name</label>
+                <textarea name="name" id="name" placeholder="Name Surname" required></textarea>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="me@email.com" required>
+            </div>
+            <div>
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <div id="response" class="hidden">
+            Thank you, your message has been sent
         </div>
-        <div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="me@email.com" required>
-        </div>
-        <div>
-            <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
-        </div>
-    </form>
-<div id="response" class="hidden">
-    Thank you, your message has been sent
-</div>
-</section>
+    </section>
 
+    <section id="footer">
+      <div id="logo">
+        <a href="https://www.praguecityuniversity.cz">
+            <img src="media/pcu_logo.png" alt="Logo">
+        </a>
+    </div>
+          <div class="social-icons">
+              <a href="https://www.facebook.com/PragueCityUniversity"><img src="media/facebook_icon.png" alt="Facebook"></a>
+              <a href="https://www.instagram.com/praguecityuniversity/"><img src="media/instagram_icon.png" alt="Instagram"></a>
+              <a href="https://twitter.com/PragueCityUni"><img src="media/twitter_icon.png" alt="Twitter"></a>
+              <a href="https://www.linkedin.com/school/prague-city-university/"><img src="media/linkedin_icon.png" alt="LinkedIn"></a>
+              <a href="https://www.youtube.com/channel/UCtJM41jXN0JSVFM2pxuAzGw"><img src="media/youtube_icon.png" alt="YouTube"></a>
+              <a href="https://www.flickr.com/photos/praguecityuniversity/albums"><img src="media/flickr_icon.png" alt="Flickr"></a>
+          </div>
+      </div>
+  </section>  
+  
+</body>
 </html>
+ 
+
+
